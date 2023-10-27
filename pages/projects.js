@@ -11,7 +11,14 @@ export default function Projects() {
         </Head>
         
         <h1>Projects</h1>
+
         <section>
+        <Project
+            title="Solitaire Solver"
+            link="https://github.com/jcrowe6/solitaire_solver"
+            desc="Solitaire engine written in C, and a Gymnasium environment that wraps it, to train an agent with reinforcement learning."
+            used="[C, Python, Gymnasium]"
+        />
         <Project
             title="Pascal's Mod Triangle"
             link="https://github.com/jcrowe6/pascals-mod-triangle/blob/master/pascals%20mod%20triangle.ipynb"
@@ -26,14 +33,14 @@ export default function Projects() {
         />
         <Project
             title="Markov Chain Sentences"
-            link="/markov"
-            desc="Webapp that will take a link to a webpage and use Markov chaining to create a new, strange sentence from it."
+            link="https://github.com/jcrowe6/markov_page"
+            desc="Webapp that takes a link to a webpage and uses Markov chaining / bigram to create a new, strange sentence from it. (Used to be hosted on my old site but haven't gotten around to restarting it)"
             used="[Python, Flask, Numpy, BeautifulSoup]"
         />
         <Project
             title="Optimal Hangman"
-            link="/hangman/main"
-            desc='Webapp and API I created that uses simple statistics to compute the "optimal" letter guesses for a game of hangman.'
+            link="https://github.com/jcrowe6/optimal-hangman-web"
+            desc="Webapp and API I created that uses simple statistics to compute the optimal letter guesses for a game of hangman. (Used to be hosted on my old site but haven't gotten around to restarting it)"
             used="[Python, Flask]"
         />
         <Project
@@ -44,7 +51,7 @@ export default function Projects() {
         />
         <Project
             title="PHP Calculator Writeup"
-            link="/phpc.html"
+            link="/posts/hacking-php-calc"
             desc="Writeup of my solution to the PHP Calculator challenge from PwnyCTF / UIUC's cybersecurity club CTF."
             used="[PHP]"
         />
