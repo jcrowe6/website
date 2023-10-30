@@ -23,7 +23,7 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <CycleName />
-        <p>I recently finished my degree in computer science and statistics at the University of Illinois at Urbana-Champaign. </p>
+        <p>I'm a software engineer at John Deere and am working on my Masters of Computer Science - Data Science at the University of Illinois at Urbana-Champaign. </p>
         
         <p> I like to code, read, and build stuff for fun and to expand my skillset. Check out my <Link href="/projects">projects</Link>! </p>
         <p>
