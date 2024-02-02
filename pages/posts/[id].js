@@ -2,7 +2,6 @@ import Layout from '../../components/layout';
 import { getAllPostIds, getPostData } from '../../libs/posts';
 import Head from 'next/head'
 import Date from '../../components/date'
-import utilStyles from '../../styles/utils.module.css';
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
@@ -28,11 +27,9 @@ export default function Post({ postData }) {
           <title>{postData.title}</title>
         </Head>
         <article>
-          <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-          <div className={utilStyles.lightText}>
-            <Date dateString={postData.date} />
-          </div>
-          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          <h1 className='text-2xl font-bold pb-3'>{postData.title}</h1>
+          <p className='text-gray-600 pb-3'><Date dateString={postData.date} /></p>
+          <div className='space-y-4 [&>h2]:text-2xl [&>h2]:font-bold [&>ul]:list-inside [&>ul]:list-disc' dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </article>
       </Layout>
     );

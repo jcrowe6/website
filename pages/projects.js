@@ -1,7 +1,6 @@
 import Layout from "../components/layout";
 import Head from 'next/head';
 import Link from 'next/link'
-import utilStyles from '../styles/utils.module.css'
 
 export default function Projects() {
     return (
@@ -10,9 +9,15 @@ export default function Projects() {
         <title>Projects</title>
         </Head>
         
-        <h1>Projects</h1>
+        <h1 className='text-2xl pb-5'>Projects</h1>
 
-        <section>
+        <section className=''>
+        <Project
+            title="Advent of Code 2023"
+            link="https://github.com/jcrowe6/AoC-23"
+            desc="My solutions to some of the Advent of Code 2023 problems - I made it to about day 17 this year!"
+            used="[Python]"
+        />
         <Project
             title="Solitaire Solver"
             link="https://github.com/jcrowe6/solitaire_solver"
@@ -74,9 +79,10 @@ export default function Projects() {
 
 function Project({title, link, desc, used}) {
     return (
-        <>
-        <h3><Link href={link} target="_blank"> {title} </Link></h3>
-        <p>{desc} <span className={utilStyles.smallText}>{used}</span></p>
-        </>
+        <div className='pb-4'>
+        <h1 className='text-xl'><Link className="cool-link" href={link} target="_blank"> {title} </Link></h1>
+        <p>{desc}</p>
+        <p className='text-sm text-gray-600'>{used}</p>
+        </div>
     )
 }

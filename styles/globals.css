@@ -2,44 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: Verdana, Arial, Helvetica Neue, Cantarell, Fira Sans, Droid Sans, sans-serif;
+
+@layer base {
+  .cool-link {
+    @apply text-blue-500 relative w-fit inline-block after:block after:content-[''] after:absolute after:h-[2px] after:bg-blue-500 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left
+  }
 }
 
-a,
-.cycleName {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-a:hover,
-a:focus,
-a:active {
-  text-decoration: underline;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-h1,
-h2,
-h3,
-p,
-ul {
-  margin: 0.25;
-}
-
-
-button {
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-}
