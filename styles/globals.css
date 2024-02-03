@@ -4,6 +4,10 @@
 
 
 @layer base {
+  html {
+    font-family: "Inconsolata", system-ui, sans-serif;
+  }
+
   .cool-link {
     @apply text-blue-500 relative w-fit inline-block after:block after:content-[''] after:absolute after:h-[2px] after:bg-blue-500 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left
   }

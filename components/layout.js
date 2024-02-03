@@ -15,6 +15,12 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inconsolata"
+          rel="stylesheet"
+        />
       </Head>
       <header className='flex flex-col items-center'>
         {home ? (
@@ -52,7 +58,7 @@ export default function Layout({ children, home }) {
       <main className=''>{children}</main>
       {!home && (
         <div className='my-8'>
-          <Link className='cool-link' href="/">← Back to home</Link>
+          <Link className='text-xl cool-link' href="/">← Back to home</Link>
         </div>
       )}
     </div>

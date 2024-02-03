@@ -9,19 +9,20 @@ export default function Projects() {
         <title>Projects</title>
         </Head>
         
-        <h1 className='text-2xl pb-5'>Projects</h1>
+        <h1 className='text-4xl pb-5'>Projects</h1>
 
-        <section className=''>
+        <section>
         <Project
             title="Advent of Code 2023"
             link="https://github.com/jcrowe6/AoC-23"
-            desc="My solutions to some of the Advent of Code 2023 problems - I made it to about day 17 this year!"
+            desc="My solutions to some of the Advent of Code 2023 problems - I only made it to day 17 before the 'amount of time to solve the problem'
+             line and the 'amount of non-holiday activity time' line intersected"
             used="[Python]"
         />
         <Project
             title="Solitaire Solver"
             link="https://github.com/jcrowe6/solitaire_solver"
-            desc="Solitaire engine written in C, and a Gymnasium environment that wraps it, to train an agent with reinforcement learning."
+            desc="Solitaire engine written in C, and a Gymnasium environment that wraps it, to train an agent with reinforcement learning. "
             used="[C, Python, Gymnasium]"
         />
         <Project
@@ -80,9 +81,9 @@ export default function Projects() {
 function Project({title, link, desc, used}) {
     return (
         <div className='pb-4'>
-        <h1 className='text-xl'><Link className="cool-link" href={link} target="_blank"> {title} </Link></h1>
-        <p>{desc}</p>
-        <p className='text-sm text-gray-600'>{used}</p>
+        <h1 className='text-2xl'><Link className="cool-link" href={link} target="_blank"> {title} </Link></h1>
+        <p className="text-lg">{desc}</p>
+        <p className='text-md text-gray-600'>{used}</p>
         </div>
     )
 }

@@ -26,7 +26,7 @@ export default function Home({ allPostsData }) {
 
         <ul className='list-disc list-inside'>
           <li>a software engineer @ John Deere</li>
-          <li>working on my Master's of Computer Science @ UIUC</li>
+          <li>a MCS-Data Science student @ UIUC</li>
         </ul>
         
         <p> I like to code, read, and build stuff for fun and to expand my skillset. Check out my <Link className='cool-link' href="/projects">projects</Link>! </p>
@@ -39,7 +39,7 @@ export default function Home({ allPostsData }) {
         <h1 className='text-3xl pb-3'>Blog</h1>
         <ul>
           {allPostsData.map(({ id, date, title }) => (
-            <li key={id}>
+            <li className='pb-4' key={id}>
             <p className='text-2xl'><Link className='cool-link' href={`/posts/${id}`}>{title}</Link></p>
             <p className='text-lg text-gray-600'><Date dateString={date} /></p>
             </li>

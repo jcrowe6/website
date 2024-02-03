@@ -27,9 +27,9 @@ export default function Post({ postData }) {
           <title>{postData.title}</title>
         </Head>
         <article>
-          <h1 className='text-2xl font-bold pb-3'>{postData.title}</h1>
-          <p className='text-gray-600 pb-3'><Date dateString={postData.date} /></p>
-          <div className='space-y-4 [&>h2]:text-2xl [&>h2]:font-bold [&>ul]:list-inside [&>ul]:list-disc' dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          <h1 className='text-4xl font-bold pb-3'>{postData.title}</h1>
+          <p className='text-gray-600 text-lg pb-3'><Date dateString={postData.date} /></p>
+          <div className='space-y-4 [&>p]:text-xl [&>h2]:text-3xl [&>h2]:font-bold [&>ul]:list-inside [&>ul]:list-disc [&>ul]:text-xl' dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </article>
       </Layout>
     );

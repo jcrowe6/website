@@ -1,5 +1,5 @@
 ---
-title: 'Hacking "PHP Calculator" writeup'
+title: 'Hacking "PHP Calculator" // CTF writeup'
 date: '2023-10-27'
 ---
 *[2023 update]: I actually wrote this in 2021 on my old site - I've formatted it and made minor edits but the content remains the same!*
