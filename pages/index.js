@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link'
 import Layout, { siteTitle } from '../components/layout';
-import utilStyles from '../styles/utils.module.css';
 import React from 'react';
 import { getSortedPostsData } from '../libs/posts';
 import Date from '../components/date'
@@ -21,26 +20,28 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
+      <section className='text-2xl py-5 space-y-3'>
         <CycleName />
-        <p>I'm a software engineer at John Deere and am working on my Masters of Computer Science - Data Science at the University of Illinois at Urbana-Champaign. </p>
+        <p>I'm...</p>
+
+        <ul className='list-disc list-inside'>
+          <li>a software engineer @ John Deere</li>
+          <li>a MCS-Data Science student @ UIUC</li>
+        </ul>
         
-        <p> I like to code, read, and build stuff for fun and to expand my skillset. Check out my <Link href="/projects">projects</Link>! </p>
+        <p> I like to code, read, and build stuff for fun and to expand my skillset. Check out my <Link className='cool-link' href="/projects">projects</Link>! </p>
         <p>
-          I also like to do astrophotography at night when the skies are clear. You can see some of that work on my <Link target='_blank' href="https://www.instagram.com/jay_cr0well/">instagram</Link>.
+          I also like to do astrophotography at night when the skies are clear. You can see some of that work on my <Link className='cool-link' target='_blank' href="https://www.instagram.com/jay_cr0well/">instagram</Link>
         </p>
       </section>
 
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
+      <section className='py-5'>
+        <h1 className='text-3xl pb-3'>Blog</h1>
+        <ul>
           {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-            <Link href={`/posts/${id}`}>{title}</Link>
-            <br />
-            <small className={utilStyles.lightText}>
-              <Date dateString={date} />
-            </small>
+            <li className='pb-4' key={id}>
+            <p className='text-2xl'><Link className='cool-link' href={`/posts/${id}`}>{title}</Link></p>
+            <p className='text-lg text-gray-600'><Date dateString={date} /></p>
             </li>
           ))}
         </ul>
@@ -54,7 +55,7 @@ class CycleName extends React.Component {
     super(props);
     this.state = {
       num: 0,
-      names: ["Jeremiah", "Jay", "Jerry", "JP", "j4yb0ne", "really good at coding stuff in React like this text cycling component that you've been clicking on"],
+      names: ["Jeremiah", "Jay", "Jerry", "JP", "j4yb0ne"],
     }
   }
 
@@ -64,7 +65,7 @@ class CycleName extends React.Component {
 
   render() {
     return <p>
-      Hi! I'm <span className='cycleName' onClick={this.changeText}>{this.state.names[this.state.num]}</span>.
+      Hi! I'm <span className='cursor-default text-blue-500 ' onClick={this.changeText}>{this.state.names[this.state.num]}</span>
     </p>
   }
 }
