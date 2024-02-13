@@ -7,6 +7,13 @@ export const siteTitle = 'Jeremiah Crowell';
 
 export default function Layout({ children, home }) {
   return (
+  <>
+  {<>
+    <div className={`stars ${home ? "move1" : ""}`}></div>
+    <div className={`stars2 ${home ? "move2" : ""}`}></div>
+    <div className={`stars3 ${home ? "move3" : ""}`}></div>
+    </>
+  }
   <div className="container mx-auto my-12 px-20">
       <Head>
         <meta
@@ -62,5 +69,6 @@ export default function Layout({ children, home }) {
         </div>
       )}
     </div>
+    </>
   );
 }
