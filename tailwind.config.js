@@ -10,7 +10,7 @@ module.exports = {
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
 
-      'md': '768px',
+      'md': '825px',
       // => @media (min-width: 768px) { ... }
       
       // removing higher screens sets default to mobile size - which is what I want for this style of website
