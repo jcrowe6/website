@@ -1,12 +1,16 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import Stars from './stars';
 
 const name = 'Jeremiah Crowell';
 export const siteTitle = 'Jeremiah Crowell';
 
 export default function Layout({ children, home }) {
+
   return (
+  <>
+  <Stars animate={home}/>
   <div className="container mx-auto my-12 px-20">
       <Head>
         <meta
@@ -15,12 +19,6 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inconsolata"
-          rel="stylesheet"
-        />
       </Head>
       <header className='flex flex-col items-center'>
         {home ? (
@@ -62,5 +60,6 @@ export default function Layout({ children, home }) {
         </div>
       )}
     </div>
+    </>
   );
 }

@@ -9,9 +9,9 @@ export default function Projects() {
         <title>Projects</title>
         </Head>
         
-        <h1 className='text-4xl pb-5'>Projects</h1>
-
-        <section>
+        <h1 className='text-4xl pb-2'>Projects</h1>
+        <p className="text-xl">Where I put medium-sized things that I've made, usually after being nerd sniped by some interesting problem</p>
+        <section className="pt-5">
         <Project
             title="Advent of Code 2023"
             link="https://github.com/jcrowe6/AoC-23"
