@@ -10,8 +10,7 @@ export default function Projects() {
         </Head>
         
         <h1 className='text-4xl pb-2'>Projects</h1>
-        <p className="text-xl">I am very prone to being nerd-sniped by 
-        on any given day/month/year.</p>
+        <p className="text-xl">Where I put medium-sized things that I've made, usually after being nerd sniped by some interesting problem</p>
         <section className="pt-5">
         <Project
             title="Advent of Code 2023"

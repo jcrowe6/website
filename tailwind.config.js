@@ -6,6 +6,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}"
   ],
   theme: {
+    extend: {
+      fontFamily: {
+        mono: ['var(--font-inconsolata)'],
+        sans: ['var(--font-inter)'],
+      }
+    },
     screens: {
       'sm': '640px',
       // => @media (min-width: 640px) { ... }

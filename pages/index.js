@@ -22,16 +22,16 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className='text-2xl py-5 space-y-3'>
         <CycleName />
-        <p>I'm a <span className='underline underline-offset-1 decoration-blue-500'>full stack developer</span> and a 
-          data analyst 
-          working at John Deere and on a <span className='underline underline-offset-1 decoration-blue-500'>MCS Data Science</span> at UIUC </p>
-        <div className='flex justify-center space-x-20'>
-          <Link className='cool-link' href="/projects">⇒ Résumé</Link>
-          <Link className='cool-link' href="/projects">⇒ Email</Link>
+        <p>I'm a <span className='underline underline-offset-1 decoration-blue-500'>full stack developer</span> and 
+          aspiring data scientist 
+          working at John Deere and on a <span className='underline underline-offset-1 decoration-blue-500'>Master's of Data Science</span> at UIUC </p>
+        <div className='py-4 flex justify-center space-x-20'>
+          <Link className='cool-link' target='_blank' href="/jcrowell_resume.pdf">⇒ Résumé</Link>
+          <Link className='cool-link' target='_blank' href="mailto:jeremiah.c2001@gmail.com">⇒ Email</Link>
         </div>
         <p>I also just generally like learning and making cool stuff. My other endeavours include...</p>
         <ul className='list-disc list-inside'>
-          <li>Amateur <Link className='cool-link' href="/projects">astrophotography</Link></li>
+          <li>Amateur <Link className='cool-link' target="_blank" href="https://www.instagram.com/jay_cr0well/">astrophotography</Link></li>
           <li>Myriad side <Link className='cool-link' href="/projects">projects</Link></li>
         </ul>
       </section>
