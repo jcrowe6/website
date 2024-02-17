@@ -22,17 +22,18 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className='text-2xl py-5 space-y-3'>
         <CycleName />
-        <p>I'm...</p>
-
+        <p>I'm a <span className='underline underline-offset-1 decoration-blue-500'>full stack developer</span> and 
+          aspiring data scientist 
+          working at John Deere and on a <span className='underline underline-offset-1 decoration-blue-500'>Master's of Data Science</span> at UIUC </p>
+        <div className='py-4 flex justify-center space-x-20'>
+          <Link className='cool-link' target='_blank' href="/jcrowell_resume.pdf">⇒ Résumé</Link>
+          <Link className='cool-link' target='_blank' href="mailto:jeremiah.c2001@gmail.com">⇒ Email</Link>
+        </div>
+        <p>I also just generally like learning and making cool stuff. My other endeavours include...</p>
         <ul className='list-disc list-inside'>
-          <li>a software engineer @ John Deere</li>
-          <li>a MCS-Data Science student @ UIUC</li>
+          <li>Amateur <Link className='cool-link' target="_blank" href="https://www.instagram.com/jay_cr0well/">astrophotography</Link></li>
+          <li>Myriad side <Link className='cool-link' href="/projects">projects</Link></li>
         </ul>
-        
-        <p> I like to code, read, and build stuff for fun and to expand my skillset. Check out my <Link className='cool-link' href="/projects">projects</Link>! </p>
-        <p>
-          I also like to do astrophotography at night when the skies are clear. You can see some of that work on my <Link className='cool-link' target='_blank' href="https://www.instagram.com/jay_cr0well/">instagram</Link>
-        </p>
       </section>
 
       <section className='py-5'>
@@ -65,7 +66,7 @@ class CycleName extends React.Component {
 
   render() {
     return <p>
-      Hi! I'm <span className='cursor-default text-blue-500 ' onClick={this.changeText}>{this.state.names[this.state.num]}</span>
+      Hi! I'm <span className='cursor-default cool-link ' onClick={this.changeText}>{this.state.names[this.state.num]}</span>
     </p>
   }
 }

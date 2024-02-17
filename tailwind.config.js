@@ -6,11 +6,17 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}"
   ],
   theme: {
+    extend: {
+      fontFamily: {
+        mono: ['var(--font-inconsolata)'],
+        sans: ['var(--font-inter)'],
+      }
+    },
     screens: {
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
 
-      'md': '768px',
+      'md': '825px',
       // => @media (min-width: 768px) { ... }
       
       // removing higher screens sets default to mobile size - which is what I want for this style of website
