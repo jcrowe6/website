@@ -11,7 +11,7 @@ export default function Layout({ children, home }) {
   return (
   <>
   <Stars animate={home}/>
-  <div className="container mx-auto my-12 px-20">
+  <div className="container mx-auto my-12 px-5">
       <Head>
         <meta
           name="description"
@@ -31,7 +31,7 @@ export default function Layout({ children, home }) {
               width={144}
               alt=""
             />
-            <h1 className='text-4xl font-bold p-5'>{name}</h1>
+            <h1 className='text-3xl md:text-4xl text-nowrap font-bold p-5'>{name}</h1>
           </>
         ) : (
           <>
@@ -45,7 +45,7 @@ export default function Layout({ children, home }) {
                 alt=""
               />
             </Link>
-            <h2 className='text-2xl font-bold p-5'>
+            <h2 className='text-2xl text-nowrap font-bold p-5'>
               <Link href="/" className='text-inherit'>
                 {name}
               </Link>
