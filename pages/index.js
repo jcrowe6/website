@@ -20,7 +20,7 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className='text-2xl py-5 space-y-3'>
+      <section className='text-xl md:text-2xl py-5 space-y-3'>
         <CycleName />
         <p>I'm a <span className='underline underline-offset-1 decoration-blue-500'>full stack developer</span> and 
           aspiring data scientist 
