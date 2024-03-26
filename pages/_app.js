@@ -1,7 +1,7 @@
 import '../styles/globals.css';
-import { Inconsolata, Roboto_Mono, Ubuntu_Mono } from 'next/font/google'
+import { Inconsolata, Libre_Franklin } from 'next/font/google'
 
-const inconsolata = Inconsolata({
+const inconsolata = Libre_Franklin({
     subsets: ['latin'],
     weight: ["400"],
     variable: '--font-inconsolata',
