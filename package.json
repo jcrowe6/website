@@ -6,6 +6,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
+    "@next/mdx": "^14.1.4",
+    "@types/mdx": "^2.0.12",
     "date-fns": "^2.30.0",
     "gray-matter": "^4.0.3",
     "next": "^13.4.13",
