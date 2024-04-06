@@ -1,10 +1,10 @@
 import '../styles/globals.css';
-import { Inconsolata, Libre_Franklin } from 'next/font/google'
+import { Libre_Franklin } from 'next/font/google'
 
-const inconsolata = Libre_Franklin({
+const librefranklin = Libre_Franklin({
     subsets: ['latin'],
     weight: ["400"],
-    variable: '--font-inconsolata',
+    variable: '--font-librefranklin',
   })
 
   
@@ -17,7 +17,7 @@ pageProps is an object with the initial props that were preloaded for your
 page by one of our data fetching methods, otherwise it's an empty object. */
 export default function App({ Component, pageProps }) {
     return (
-        <main className={`${inconsolata.variable} font-mono`}>
+        <main className={`${librefranklin.variable} font-sans`}>
             <Component {...pageProps} />
         </main>
     )
