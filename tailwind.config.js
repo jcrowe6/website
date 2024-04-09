@@ -8,8 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mono: ['var(--font-inconsolata)'],
-        sans: ['var(--font-inter)'],
+        sans: ['var(--font-librefranklin)'],
       }
     },
     screens: {
