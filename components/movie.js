@@ -1,7 +1,7 @@
 import Image from "next/image"
 import StarRating from "./starrating"
 
-export default function MovieCard({children, movieid, title, rating, onRatingChange}) {
+export default function MovieCard({children, movieid, title, rating, onRatingChange, showRating=true}) {
     return (
         <>
         <div className="flex flex-col items-center h-75">
@@ -14,7 +14,7 @@ export default function MovieCard({children, movieid, title, rating, onRatingCha
             <div className="h-14 text-sm text-center">
             <p>{title}</p>
             </div>
-            <StarRating rating={rating} onRatingChange={onRatingChange}/>
+            {showRating && <StarRating rating={rating} onRatingChange={onRatingChange}/>}
         </div>
         </>
     )
