@@ -11,7 +11,7 @@ export default function Layout({ children, home }) {
   return (
   <>
   <Stars animate={home}/>
-  <div className="container mx-auto my-12 px-5">
+  <div className="container mx-auto my-12 px-5 max-w-3xl">
       <Head>
         <meta
           name="description"
