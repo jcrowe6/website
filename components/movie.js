@@ -11,7 +11,7 @@ export default function MovieCard({children, movieid, title, rating, onRatingCha
                 height={150}
                 width={100}
             />
-            <div className="h-14 text-sm text-center">
+            <div className="lg:h-14 lg:text-sm md:h-20 md:text-xs text-center">
             <p>{title}</p>
             </div>
             {showRating && <StarRating rating={rating} onRatingChange={onRatingChange}/>}

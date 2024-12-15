@@ -18,7 +18,7 @@ export default function MovieRecommender() {
       };
 
     const getRecommendations = () => {
-        fetch('/api/movieapi/recommend', 
+        fetch('http://127.0.0.1:5000/api/movieapi/recommend', 
             {
                 method: 'post',
                 headers: {'Content-Type':'application/json'},
@@ -31,7 +31,7 @@ export default function MovieRecommender() {
     }
 
     useEffect(() => {
-        fetch('/api/movieapi/getInitialMovies', )
+        fetch('http://127.0.0.1:5000/api/movieapi/getInitialMovies', )
           .then(response => response.json())
           .then(json => setToRate(json["recs"]))
           .catch(error => console.error(error));

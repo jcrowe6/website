@@ -7,13 +7,13 @@ const StarRating = ({rating = undefined, onRatingChange}) => {
   };
 
   return (
-    <div style={{ display: 'flex', gap: '5px', cursor: 'pointer' }}>
+    <div className='flex gap-1 cursor-pointer mx-4'>
       {[...Array(5)].map((_, index) => (
         <span
           key={index}
           onClick={() => handleClick(index)}
+          className='lg:text-2xl md:'
           style={{
-            fontSize: '24px',
             color: rating !== undefined && index < rating ? 'gold' : 'grey',
           }}
         >
