@@ -18,6 +18,7 @@ module.exports = {
       'md': '800px',
       // => @media (min-width: 768px) { ... }
       
+      'lg': '1536px',
       // removing higher screens sets default to mobile size - which is what I want for this style of website
       //'lg': '1024px',
       // => @media (min-width: 1024px) { ... }
