@@ -3,6 +3,7 @@ import { getAllPostIds, getPostData } from '../../libs/posts';
 import Head from 'next/head'
 import Date from '../../components/date'
 import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm';
 import Image from 'next/image'
 import Link from 'next/link';
 import { Prism } from 'react-syntax-highlighter'
@@ -43,6 +44,7 @@ export default function Post({ data, content }) {
         <h1 className='text-4xl text-center font-bold pb-3'>{data.title}</h1>
         <p className='text-gray-400 text-lg pb-3'><Date dateString={data.date} /></p>
         <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
           className='text-lg leading-relaxed space-y-3'
           children={content}
           components={{
@@ -74,6 +76,11 @@ export default function Post({ data, content }) {
                 </span>
               );
               },
+
+            table: ({children}) => <div className='overflow-x-auto'><table className='mx-auto w-11/12 text-left rtl:text-right text-gray-500 dark:text-gray-400'>{children}</table></div>,
+            tr: ({children}) => <tr className='bg-white border-b dark:bg-gray-800 dark:border-gray-700'>{children}</tr>,
+            th: ({children}) => <th className='px-6 py-4 text-gray-700 bg-gray-50 dark:bg-gray-700 dark:text-gray-400'>{children}</th>,  
+            td: ({children}) => <td className='px-6 py-4'>{children}</td>  
           }}
         />
       </article>

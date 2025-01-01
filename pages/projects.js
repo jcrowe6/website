@@ -13,6 +13,12 @@ export default function Projects() {
         <p className="text-xl">Where I put medium-sized things that I've made, usually after being nerd sniped by some interesting problem</p>
         <section className="pt-5">
         <Project
+            title="Movie Recommender"
+            link="/MovieRecommender"
+            desc="Rate some movies, get recommendations. Demo of item-item collaborative filtering using the MovieLens 1M dataset."
+            used="[Python, Flask, Numpy]"
+        />
+        <Project
             title="Advent of Code 2023"
             link="https://github.com/jcrowe6/AoC-23"
             desc="My solutions to some of the Advent of Code 2023 problems - I only made it to day 17 before the 'amount of time to solve the problem'
