@@ -77,7 +77,7 @@ export default function Post({ data, content }) {
               );
               },
 
-            table: ({children}) => <table className='mx-auto w-11/12 text-left rtl:text-right text-gray-500 dark:text-gray-400'>{children}</table>,
+            table: ({children}) => <div className='overflow-x-auto'><table className='mx-auto w-11/12 text-left rtl:text-right text-gray-500 dark:text-gray-400'>{children}</table></div>,
             tr: ({children}) => <tr className='bg-white border-b dark:bg-gray-800 dark:border-gray-700'>{children}</tr>,
             th: ({children}) => <th className='px-6 py-4 text-gray-700 bg-gray-50 dark:bg-gray-700 dark:text-gray-400'>{children}</th>,  
             td: ({children}) => <td className='px-6 py-4'>{children}</td>  
