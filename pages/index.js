@@ -22,7 +22,7 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className='text-xl md:text-2xl py-5 space-y-3'>
         <CycleName />
-        <p>I'm a <span className='underline underline-offset-1 decoration-blue-500'>software developer</span> and <span className='underline underline-offset-1 decoration-blue-500'>data science nerd</span>.
+        <p>I'm a <span className='underline underline-offset-1 decoration-blue-500'>software developer</span> with ML engineering experience and a passion for data science.
           I'm working at John Deere, and just finished my <span className='underline underline-offset-1 decoration-blue-500'>Master's of Data Science</span> at UIUC </p>
         <div className='py-4 flex justify-center space-x-20'>
           <Link className='cool-link' target='_blank' href="/jcrowell_resume.pdf">⇒ Résumé</Link>
@@ -30,8 +30,10 @@ export default function Home({ allPostsData }) {
         </div>
         <p>I also just generally like learning and making cool stuff. My other endeavours include...</p>
         <ul className='list-disc list-inside'>
-          <li>Amateur <Link className='cool-link' target="_blank" href="https://www.instagram.com/jay_cr0well/">astrophotography</Link></li>
+          <li>Building <Link className='cool-link' target="_blank" href="https://www.boardally.io/">Boardally</Link></li>
           <li>Myriad side <Link className='cool-link' href="/projects">projects</Link></li>
+          <li>Amateur <Link className='cool-link' target="_blank" href="https://www.instagram.com/jay_cr0well/">astrophotography</Link></li>
+          
         </ul>
       </section>
 

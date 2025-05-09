@@ -13,6 +13,12 @@ export default function Projects() {
         <p className="text-xl">Where I put medium-sized things that I've made, usually after being nerd sniped by some interesting problem</p>
         <section className="pt-5">
         <Project
+            title="Boardally"
+            link="https://www.boardally.io/"
+            desc="A RAG application to help keep board game nights running smoothly. Choose the game, ask about a rule you can't remember, and Boardally prompts an LLM with the rulebook to retrieve exactly what you need to know."
+            used="[Python, Flask, Numpy]"
+        />
+        <Project
             title="Movie Recommender"
             link="/MovieRecommender"
             desc="Rate some movies, get recommendations. Demo of item-item collaborative filtering using the MovieLens 1M dataset."
