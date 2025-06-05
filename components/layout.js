@@ -25,7 +25,7 @@ export default function Layout({ children, home }) {
           <>
             <Image
               priority
-              src="/images/hs4.jpg"
+              src="/images/hs7.jpg"
               className='rounded-[80px] transition-all hover:-translate-y-1 hover:rounded-[40px] duration-300'
               height={144}
               width={144}
@@ -38,7 +38,7 @@ export default function Layout({ children, home }) {
             <Link href="/">
               <Image
                 priority
-                src="/images/hs4.jpg"
+                src="/images/hs7.jpg"
                 className='rounded-[80px] transition-all hover:-translate-y-1 hover:rounded-[30px] duration-300'
                 height={108}
                 width={108}

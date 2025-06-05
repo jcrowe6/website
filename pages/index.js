@@ -23,7 +23,7 @@ export default function Home({ allPostsData }) {
       <section className='text-xl md:text-2xl py-5 space-y-3'>
         <CycleName />
         <p>I'm a <span className='underline underline-offset-1 decoration-blue-500'>software developer</span> with ML engineering experience and a passion for data science.
-          I'm working at John Deere, and just finished my <span className='underline underline-offset-1 decoration-blue-500'>Master's of Data Science</span> at UIUC </p>
+          I'm working at John Deere and completed a <span className='underline underline-offset-1 decoration-blue-500'>Master's of Data Science</span> at UIUC </p>
         <div className='py-4 flex justify-center space-x-20'>
           <Link className='cool-link' target='_blank' href="/jcrowell_resume.pdf">⇒ Résumé</Link>
           <Link className='cool-link' target='_blank' href="mailto:jeremiah.c2001@gmail.com">⇒ Email</Link>
