@@ -60,7 +60,7 @@ export default function MovieRecommender() {
         </Link>
         </p>
     <h1 className='text-3xl pb-10'>Rate some movies:</h1>
-    <div className="grid grid-cols-10 gap-4">
+    <div className="grid grid-cols-2 md:grid-cols-10 gap-4">
         {toRate.map(([id,title]) => (
             <MovieCard 
                 key={id}
@@ -76,7 +76,7 @@ export default function MovieRecommender() {
             onClick={getRecommendations}>
         Get Recommendations!
     </button>
-    <div className="grid grid-cols-10 gap-4">
+    <div className="grid grid-cols-2 md:grid-cols-10 gap-4">
         {recs.map(([id,title]) => (
             <MovieCard 
                 key={id}
